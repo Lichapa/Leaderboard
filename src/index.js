@@ -1,7 +1,28 @@
 import './style.css';
 
-document.getElementById('recentScores').innerHTML = `<ul class="scoreList">
-<li>Name: 100</li>
-<li>Name: 200</li>
-<li>Name: 50</li>
-</ul>`;
+const scoresList = [{
+  player: "Name",
+  score: 100,
+},
+{ player: "Mary",
+  score: 80,
+},
+{
+  player: "Marion",
+  score: 90,
+},
+];
+
+function board(list) {
+  const myList = document.getElementById('scoreList');
+  const listElement = document.createElement('li');
+  listElement.innerHTML =  `${list.player} : ${list.score}`;
+  myList.appendChild(listElement);
+  console.log(list.score);
+}
+
+function addList(scores){
+  scores.forEach((score) => board(score));
+}
+
+addList(scoresList);
