@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+ width: 50%;
+ margin: 50px auto;
+}
+
+.score {
+padding: 10;
+width: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width:auto
+}
+
+.formItem {
+  margin: 5px;
+  height: 25px;
+}
+
+button {
+  width: 50%;
+  margin-right: 0px;
+  align-self: flex-end;
+}
+
+.recentScore {
+  border: 1px solid black;
+}
+
+.scoreHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+
+.scoreHeader>button {
+  width: 30%;
+}
