@@ -50,3 +50,7 @@ button {
 .scoreHeader > button {
   width: 30%;
 }
+
+.scoreList {
+  list-style-type: none;
+}
