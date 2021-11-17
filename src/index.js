@@ -13,16 +13,13 @@ const addList = (scores) => {
   scores.forEach((score) => board(score));
 };
 
-const orderScore = (scoreList) => {
-  return scoreList.sort((a, b) => b.score - a.score);
-};
-
+const sortScore = (scoreList) => scoreList.sort((a, b) => b.score - a.score);
 
 const getScores = async () => {
   const request = await fetch(baseUrl);
   const scores = await request.json();
   const scoreList = scores.result;
-  orderScore(scoreList);
+  sortScore(scoreList);
   addList(scoreList);
 };
 
