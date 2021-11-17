@@ -5,7 +5,7 @@ const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/
 const board = (list) => {
   const myList = document.getElementById('scoreList');
   const listElement = document.createElement('li');
-  listElement.innerHTML = `${list.player} : ${list.score}`;
+  listElement.innerHTML = `${list.user} : ${list.score}`;
   myList.appendChild(listElement);
 };
 
@@ -19,6 +19,27 @@ const getScores = async () => {
   const scoreList = scores.result;
   addList(scoreList);
 };
+
+const addScores = async () => {
+  const newScore = {
+    user: document.getElementById('name').value,
+    score: document.getElementById('score').value,
+  };
+
+  (await fetch(baseUrl, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(newScore),
+  })).json();
+};
+
+document.getElementById('submit').addEventListener('click', (e) => {
+  e.preventDefault();
+  addScores();
+  document.getElementById('form').reset();
+});
 
 document.getElementById('refresh').addEventListener('click', () => window.location.reload());
 window.addEventListener('load', () => getScores());
