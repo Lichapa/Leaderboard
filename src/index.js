@@ -1,5 +1,7 @@
 import './style.css';
 
+const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/6FRJ9P3M1OlCLyPtaGot/scores/';
+
 const board = (list) => {
   const myList = document.getElementById('scoreList');
   const listElement = document.createElement('li');
