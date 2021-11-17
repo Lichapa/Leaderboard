@@ -13,4 +13,12 @@ const addList = (scores) => {
   scores.forEach((score) => board(score));
 };
 
-addList(scoresList);
+const getScores = async () => {
+  const request = await fetch(baseUrl);
+  const scores = await request.json();
+  const scoreList = scores.result;
+  addList(scoreList);
+};
+
+document.getElementById('refresh').addEventListener('click', () => window.location.reload());
+window.addEventListener('load', () => getScores());
