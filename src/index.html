@@ -22,8 +22,10 @@
         <div class="userInput">
             <h2>Add your scrore</h2>
             <form action="#" class="form" id="form">
-                <input class="formItem" type="text" name="yourName" id="name">
-                <input class="formItem" type="text" name="yourScore" id="score">
+                <label for="yourName">Your Name</label>
+                <input class="formItem" type="text" name="yourName" id="name" required>
+                <label for="yourScore"> Score</label>
+                <input class="formItem" type="number" name="yourScore" id="score" required>
                 <button class="formItem" type="submit" id="submit">submit</button>
             </form>
         </div>  
