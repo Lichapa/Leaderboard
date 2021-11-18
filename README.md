@@ -2,7 +2,7 @@
 
 > Leaderboard.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.PNG)
 
 This is a project to demonstrate the use of JavaScript with API by creating the leaderboard.
 
