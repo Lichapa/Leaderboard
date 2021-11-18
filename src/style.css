@@ -14,6 +14,7 @@ body {
   background-color: #5f6468;
   color: white;
   border-radius: 10px 10px;
+  box-shadow: 5px 5px 5px 3px #596063;
 }
 
 .content {
@@ -21,11 +22,11 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   background-color: rgb(116, 124, 124);
-  padding: 10px 0px;
+  padding: 10px 1px;
   font-size: large;
 }
 
-.score {  
+.score {
   width: 40%;
 }
 
@@ -37,7 +38,6 @@ body {
 .scoreList {
   padding: 10px 10px;
   list-style-position: inside;
-  
 }
 
 .scoreList > li:nth-of-type(odd) {
@@ -63,7 +63,6 @@ button {
   height: 25px;
   background-color: #98a1a7;
   border: none;
-  box-shadow: #444647;
 }
 
 .scoreHeader {
