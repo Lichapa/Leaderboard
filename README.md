@@ -14,7 +14,7 @@ This is a project to demonstrate the use of JavaScript with API by creating the 
 - Webpack
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://lichapa-leaderboard.netlify.app/)
 
 ## Author
 
